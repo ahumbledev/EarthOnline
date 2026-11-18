@@ -1,58 +1,137 @@
 # EarthOnline
 
-EarthOnline 是一个可以在浏览器中步行、驾车和参与生活工坊的三维城市探索游戏。仓库包含 TypeScript 客户端、Node.js 服务、可编辑地图、随附美术资源、内容编辑工具和自动化测试。
+> **Live Your Second Life**
 
-## 本地运行
+EarthOnline is an open-source, browser-based parallel Earth where players explore real cities, build relationships, participate in a shared economy, and create a second life together.
 
-使用 Node.js 22.18 或更新版本、npm，以及支持 WebGL 2 的浏览器。在仓库根目录运行以下命令，然后打开终端显示的本地网址。
+**Play:** [www.earth.online](http://www.earth.online/)  
+**Community:** [Discord](https://discord.gg/yJv4cpXwT)
 
-```sh
+> EarthOnline is in active development. Available locations and features vary in completeness.
+
+![Exploring South Broad Street in Philadelphia](EarthOnline-README-assets/philadelphia-street.jpg)
+
+## Features
+
+### Real Society
+
+Join a persistent multiplayer world with players from around the globe.
+
+EarthOnline is building a shared society with economic activities, player trading, property, businesses, elections, and policy management. Real-time multiplayer presence is available; the economy continues to expand, while elections and governance are in development.
+
+### Simulated Characters
+
+The long-term goal here is to simulate a world-scale population of NPCs.
+
+Build relationships with persistent characters and unlock new interactions as those relationships develop. Player-created NPCs and deeper NPC behavior, memory, and economic participation are in development.
+
+### Real-World Maps
+
+Explore a growing 3D reconstruction of the real Earth.
+
+EarthOnline aims to reproduce real streets, buildings, and places at 1:1 scale. Selected areas in Hong Kong, Tokyo, Philadelphia, Montréal, Melbourne, and Helsinki are currently available, with coverage and detail continuously improving.
+
+![Exploring a dense Tokyo neighborhood](EarthOnline-README-assets/tokyo-street.jpg)
+
+### Many Ways to Live
+
+Walk, drive, buy property, own vehicles, operate shops, and build a business empire.
+
+Activities currently include fishing, cooking, coffee making, ramen, ice cream, tailoring, painting, car washing, interior design, photography, and local challenges. New activities will be added and connected to the wider economy.
+
+| Run a coffee shop | Go fishing |
+| --- | --- |
+| ![Running a coffee shop](EarthOnline-README-assets/coffee-shop.jpg) | ![Fishing in the open world](EarthOnline-README-assets/fishing.jpg) |
+
+### Open-Source Worldbuilding
+
+EarthOnline’s main project is open source.
+
+An official EarthOnline skill is in development so humans and coding agents can contribute:
+
+- New gameplay and simulations
+- Map expansions and landmarks
+- NPC behaviors and interactions
+- Vehicles, buildings, and interiors
+- Performance, accessibility, and tooling improvements
+
+Contributions are reviewed before official integration. If EarthOnline becomes commercially profitable, outstanding contributors may be evaluated for incentives under a future contributor program.
+
+### Continuous Evolution
+
+Every system is still evolving toward one goal: a parallel world that is both fun to inhabit and convincing enough to feel alive.
+
+## Development Status
+
+| Area                                   | Status                  |
+| -------------------------------------- | ----------------------- |
+| Browser-based 3D exploration           | Available               |
+| Walking, driving, and life activities  | Available               |
+| Selected real-world districts          | Available and expanding |
+| Real-time multiplayer presence         | Available and evolving  |
+| Economy, trading, and businesses       | In active development   |
+| Persistent and player-created NPCs     | In development          |
+| Elections and policy management        | In development          |
+| Official contributor skill             | In development          |
+| Global 1:1 map and 8.3B NPC population | Long-term goal          |
+
+## Local Development
+
+Requirements:
+
+- Node.js 22.18 or newer
+- npm
+- A browser with WebGL 2 support
+
+```bash
+git clone https://github.com/ahumbledev/EarthOnline.git
+cd EarthOnline
 npm ci
 npm run dev
 ```
 
-进入街区后可在鸟瞰和步行之间切换。拖动鼠标调整视角，WASD 或方向键移动，Shift 奔跑，空格跳跃。靠近起点的车按 F 上下车，行驶时空格是手刹。点「拍照」或按 Y 进入取景，再按一次生成可保存的 PNG。
+Start the multiplayer service separately:
 
-## 可以体验什么
+```bash
+npm run server
+```
 
-- **城市探索**。香港三个街区、东京四个街区，以及费城、蒙特利尔、墨尔本、赫尔辛基，共六座城市、十一个可选区域。地图数据随仓库提供，包含街道与建筑轮廓。建筑高度和道路宽度在部分区域使用估计值。
-- **生活工坊**。可以拉面、叠冰淇淋、按食谱烹饪、钓鱼、洗车、裁衣、绘画和咖啡制作。画册可保存在浏览器本地或导出 PNG。
-- **室内布置**。家具可以摆放、移动、旋转，桌面上的小件物体也可以调整。布局保存在当前浏览器。
-- **街区挑战**。六个可编辑规则的小游戏，包含单人及多角色样例。可以试玩、修改 JSON、验证作品、保存修订和导出回放。在本地服务中可为受支持的合作作品建立最多四人的房间，八人和十六人样例可在本地切换角色或执行回放。
+Test and build:
 
-## 测试、构建和联机
-
-```sh
+```bash
 npm test
 npm run build
 npm run preview
 ```
 
-构建产物在 `dist/`，可以从站点根路径提供静态文件。纯静态托管支持城市探索、本地工坊和内置挑战。作品库、修订和房间使用开发或预览服务提供的 API。作品库存放在仓库以外的用户数据目录。城市场景内的「联机」另用一个 WebSocket 服务。保留前端进程，另开终端运行 `npm run server`，再从两个浏览器窗口进入同一街区并点击「联机」。默认服务监听本机 4174 端口，开发和预览服务器会转发 `/presence`。
+## Contributing
 
-## 仓库导览
+EarthOnline is designed to be friendly to both developers and coding agents. It provides modular TypeScript code, machine-readable content, deterministic simulations, replay tools, validation scripts, and automated tests.
 
-| 路径 | 内容 |
-| --- | --- |
-| `src/city/`、`src/city-layers/`、`src/maps/` | 城市入口、道路和建筑几何、材质、天空和街区选择 |
-| `src/exploration/`、`src/avatar/`、`src/photography/` | 角色和车辆物理、角色动画、跟随镜头、街景拍照 |
-| `src/activities-public/`、`src/coffee/`、`src/home/` | 生活工坊、室内布局和存档 |
-| `src/minigames/`、`shared/`、`scripts/` | 挑战编辑器、规则引擎、协议、打包和回放 |
-| `server/` | 玩家位置同步、挑战作品库、联机房间和内容验证 |
-| `public/` | 地图、角色、车辆、家具、材质、游戏定义和回放样例 |
-| `tooling/`、`tests/` | 建筑贡献检查、Blender 工具和自动化测试 |
+A contribution should:
 
-可以用下面的命令修改并验证挑战。建筑贡献包的文件格式和检查命令见 [工具说明](tooling/README.md)。
+1. Have a clear and limited scope.
+2. Include tests or reproducible verification.
+3. Document new formats, controls, or dependencies.
+4. Preserve asset licenses and attribution.
+5. Pass `npm test` and `npm run build`.
 
-```sh
-npm run game -- validate public/minigames/examples/collect.json
-npm run game -- replay public/minigames/examples/cooperative.json public/minigames/replays/cooperative-win.json
-```
+See [`tooling/README.md`](tooling/README.md) for contribution tools.
 
-## 许可
+## License and Attribution
 
-项目自有代码以 [MIT](LICENSE) 发布。地图、模型和材质各有自己的授权条件。分发相关文件时，请一并保留其许可与署名。
+Project-owned code is licensed under the [MIT License](LICENSE).
 
-- 地理数据及相关声明见[地图来源](MAP-SOURCES.md)，游戏内也显示当前地区署名。
-- 地表、角色、车辆和家具分别见[地表材质](MATERIAL-SOURCES.md)、[角色及动作](public/characters/SOURCES.md)、[车辆许可](public/vehicles/NOTICE.md)和[家具来源](public/room/SOURCES.md)。
-- 工坊使用的扫描素材及织物贴图见[洗车场资料](src/activities-public/carwash/bay/ASSETS.md)和[布料贴图资料](src/activities-public/tailoring/TEXTURES.md)。
+Maps and external assets may use separate licenses. See:
+
+- [Map sources](MAP-SOURCES.md)
+- [Material sources](MATERIAL-SOURCES.md)
+- [Character sources](public/characters/SOURCES.md)
+- [Vehicle notices](public/vehicles/NOTICE.md)
+- [Furniture sources](public/room/SOURCES.md)
+
+## Links
+
+- [Play EarthOnline](http://www.earth.online/)
+- [GitHub](https://github.com/ahumbledev/EarthOnline)
+- [Discord](https://discord.gg/yJv4cpXwT)
