@@ -1,0 +1,91 @@
+#item-drawing-editor.painting-editor {
+  --deep: var(--hud-ink, #090b0c); --paper: var(--hud-paper, #f4f4ef);
+  --steel: #ffffff30; --signal: #36d8f1; --harbour: #ffffff10;
+  position: fixed; z-index: 70; top: 24px; bottom: 24px; left: 24px; right: auto;
+  width: min(560px, 44vw); padding: 20px; display: flex; flex-direction: column;
+  gap: 14px; overflow: visible; color: var(--paper); background: var(--deep);
+  border: 1px solid var(--steel); border-top: 3px solid var(--signal);
+  box-shadow: 0 12px 40px #0005; font: inherit; font-size: 12px;
+}
+.painting-host .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+#item-drawing-editor.painting-editor button {
+  box-sizing: border-box; margin: 0; padding: 9px 11px; border: 1px solid var(--steel);
+  border-radius: 0; background: transparent; color: var(--paper); font: inherit;
+  font-size: 12px; cursor: pointer;
+}
+#item-drawing-editor.painting-editor button:hover:not(:disabled),
+#item-drawing-editor.painting-editor button[aria-pressed=true] { background: var(--harbour); }
+#item-drawing-editor.painting-editor button:disabled { opacity: .4; cursor: default; }
+#item-drawing-editor.painting-editor button:focus-visible,
+#item-drawing-editor.painting-editor input:focus-visible { outline: 2px solid var(--paper); outline-offset: 3px; }
+.painting-header { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.painting-header small { font-size: 10px; letter-spacing: .1em; opacity: .65; }
+.painting-header h2 { margin: 5px 0 0; font-size: 22px; font-weight: 500; }
+.painting-editor kbd { font: inherit; font-size: 10px; opacity: .55; margin-left: 10px; }
+.painting-workspace { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+.painting-paper { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 8px; background: color-mix(in srgb, var(--harbour) 32%, transparent); }
+#item-drawing-editor.painting-editor canvas[aria-label="绘画画布"] {
+  display: block; width: auto; height: auto; max-width: 100%; max-height: 100%;
+  object-fit: contain; background: var(--paper); border: 0; box-shadow: 0 4px 18px #0003;
+  cursor: crosshair; touch-action: none;
+}
+.painting-kit { flex: none; display: grid; grid-template-areas: 'tools tools' 'colors colors' 'edits save'; grid-template-columns: 1fr auto; gap: 14px; }
+.painting-tools { grid-area: tools; display: flex; gap: 6px; }
+.painting-tools button { flex: 1; display: flex; align-items: center; justify-content: space-between; min-width: 0; }
+#item-drawing-editor.painting-editor .painting-tools button[aria-pressed=true] { border-color: var(--paper); }
+.painting-colors { grid-area: colors; display: grid; grid-template-columns: minmax(0, 1fr) 90px; gap: 14px 16px; }
+.painting-palette { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); grid-template-rows: repeat(3, 24px); grid-auto-flow: column; gap: 5px; }
+#item-drawing-editor.painting-editor .painting-palette button { width: 100%; min-width: 0; height: 24px; padding: 0; border: 1px solid color-mix(in srgb, var(--paper) 18%, transparent); border-radius: 2px; background: var(--swatch); }
+#item-drawing-editor.painting-editor .painting-palette button[aria-pressed=true] { outline: 2px solid var(--paper); outline-offset: 2px; border-color: var(--deep); }
+#item-drawing-editor.painting-editor .painting-palette button:hover { border-color: var(--paper); }
+.painting-color { display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 7px; font-size: 10px; color: var(--paper); }
+.painting-color > span:first-child { opacity: .65; }
+.painting-color input { width: 100%; height: 32px; padding: 2px; border: 1px solid var(--steel); border-radius: 0; background: transparent; cursor: pointer; }
+.painting-color input::-webkit-color-swatch-wrapper { padding: 0; }
+.painting-color input::-webkit-color-swatch { border: 0; }
+.painting-color input::-moz-color-swatch { border: 0; }
+.painting-color-value { font-size: 10px; letter-spacing: .06em; font-variant-numeric: tabular-nums; }
+.painting-size { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr 42px; align-items: center; gap: 12px; font-size: 11px; }
+.painting-size > span:first-child { opacity: .65; }
+.painting-size > span:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.painting-size input { width: 100%; min-width: 0; margin: 0; accent-color: var(--signal); cursor: ew-resize; }
+.painting-edits { grid-area: edits; display: flex; gap: 6px; }
+#item-drawing-editor.painting-editor [data-draw=save] { grid-area: save; background: var(--paper); color: var(--deep); }
+#item-drawing-editor.painting-editor [data-draw=save]:hover:not(:disabled) { background: color-mix(in srgb, var(--paper) 85%, var(--steel)); }
+.painting-extras { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 12px; border-top: 1px solid color-mix(in srgb, var(--steel) 35%, transparent); }
+#item-drawing-editor.painting-editor .painting-extras button { padding: 0; border: 0; font-size: 11px; text-decoration: underline; text-underline-offset: 3px; }
+#item-drawing-editor.painting-editor .painting-extras button:hover { background: transparent; }
+.painting-tool-help { font-size: 10px; opacity: .6; line-height: 1.5; text-align: right; }
+.painting-footer { position: static; inset: auto; flex: none; display: block; text-shadow: none; pointer-events: auto; }
+.painting-footer p { margin: 0; font-size: 11px; line-height: 1.6; opacity: .7; }
+.painting-editor .item-drawing-preview { display: none; }
+.painting-editor.with-item-preview .item-drawing-preview { position: fixed; right: 8vw; top: 24vh; width: 35vw; height: 46vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; }
+.painting-editor.with-item-preview .item-drawing-preview canvas { width: min(32vw, 400px); height: auto; }
+#item-drawing-editor.painting-editor .item-drawing-preview button { background: var(--deep); border-color: var(--steel); font-size: 12px; }
+@media (max-width: 900px) {
+  body:has(.painting-host.painting-active) .game-chrome { visibility: hidden; }
+  #item-drawing-editor.painting-editor { left: 12px; top: 12px; right: 12px; bottom: 12px; width: auto; padding: 16px; gap: 12px; }
+  .painting-header h2 { font-size: 20px; }
+  .painting-workspace { gap: 12px; }
+  .painting-kit { gap: 12px; }
+  .painting-colors { grid-template-columns: minmax(0, 1fr) 70px; gap: 12px; }
+  .painting-palette { grid-template-rows: repeat(3, 22px); gap: 4px; }
+  #item-drawing-editor.painting-editor .painting-palette button { height: 22px; }
+  .painting-tool-help { max-width: 180px; }
+  .painting-editor.with-item-preview .item-drawing-preview { right: 24px; top: 88px; width: 80px; height: 100px; }
+  .painting-editor.with-item-preview .item-drawing-preview canvas { width: 80px; height: 68px; }
+  #item-drawing-editor.painting-editor .item-drawing-preview button { font-size: 9px; padding: 3px; }
+}
+@media (max-height: 580px) {
+  #item-drawing-editor.painting-editor { top: 8px; bottom: 8px; padding: 12px; gap: 8px; }
+  .painting-header small, .painting-extras, .painting-footer p { font-size: 9px; }
+  .painting-header h2 { font-size: 16px; margin-top: 2px; }
+  .painting-workspace, .painting-kit, .painting-colors { gap: 8px; }
+  .painting-palette { grid-template-rows: repeat(3, 18px); gap: 3px; }
+  #item-drawing-editor.painting-editor .painting-palette button { height: 18px; }
+  #item-drawing-editor.painting-editor button { padding: 6px 9px; }
+  .painting-extras { padding-top: 8px; }
+}
+
+.painting-notice { position:absolute;right:18px;bottom:88px;z-index:72;max-width:340px;padding:12px 16px;margin:0;background:#090b0cf2;color:#f4f4ef;border:1px solid #ffffff30;font:12px/1.6 Arial,"PingFang SC",system-ui,sans-serif; }
+.painting-canvas-page{color:var(--p5-paper);background:var(--p5-page);padding:16px;line-height:1.65}.painting-canvas-page>img{float:right;object-fit:contain}.painting-canvas-page h2{font-family:var(--p5-display);font-size:28px;transform:rotate(-2deg)}.painting-canvas-page button{display:block;margin:10px 0;padding:10px 14px;border:2px solid var(--p5-paper);background:var(--p5-ink);color:var(--p5-paper);font:inherit;font-weight:800}.painting-canvas-page button:not(:disabled):hover{color:var(--p5-ink);background:var(--p5-cyan)}.painting-canvas-page button:disabled{opacity:.45}.painting-budget{font-variant-numeric:tabular-nums;color:var(--p5-soft)}

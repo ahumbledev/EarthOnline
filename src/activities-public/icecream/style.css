@@ -1,0 +1,56 @@
+.icecream-view { position: absolute; inset: 0; color: #324d49; font-family: inherit; overflow: hidden; background: #f2ebe0; }
+.icecream-view[hidden], .icecream-view [hidden] { display: none !important; }
+.icecream-canvas { position: absolute; inset: 0; }
+.icecream-canvas canvas { width: 100%; height: 100%; display: block; }
+.icecream-header { position: absolute; top: 24px; left: 28px; right: 340px; display: flex; align-items: center; gap: 18px; pointer-events: none; }
+.icecream-header > div { min-width: 0; }
+.icecream-header > button { flex-shrink: 0; }
+.icecream-view button { font: inherit; color: inherit; background: #fffdf7; border: 1px solid #d8d4c7; border-radius: 12px; padding: 11px 17px; cursor: pointer; touch-action: manipulation; }
+.icecream-view button:hover:not(:disabled) { background: #f5e9d7; }
+.icecream-view button:focus-visible { outline: 3px solid #557f78; outline-offset: 3px; }
+.icecream-view button:disabled { opacity: .5; cursor: default; }
+.icecream-header button { pointer-events: auto; }
+.icecream-header h1 { font-size: clamp(20px, 2.5vw, 31px); margin: 3px 0 0; font-weight: 650; letter-spacing: -.035em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.icecream-eyebrow { font-size: 11px; letter-spacing: .16em; color: #697a70; }
+.icecream-members { color: #687c72; overflow-wrap: anywhere; }
+.icecream-order { position: absolute; top: 112px; left: 28px; width: 210px; background: #fffdf7ed; border: 1px solid #e1d9c8; border-radius: 16px; padding: 20px; box-shadow: 0 8px 30px #66523a0b; }
+.icecream-order h2 { font-size: 18px; margin: 9px 0 14px; font-weight: 600; }
+.icecream-order ol { margin: 0; padding-left: 22px; line-height: 1.9; font-size: 14px; }
+.icecream-order p { font-size: 13px; margin: 11px 0 0; line-height: 1.5; }
+.icecream-time { margin-top: 20px; border-top: 1px dashed #d5ccba; padding-top: 14px; display: flex; justify-content: space-between; }
+.icecream-time strong { font-size: 18px; font-weight: 600; }
+.icecream-controls { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); width: min(620px, calc(100% - 48px)); box-sizing: border-box; padding: 20px 24px; background: #fffdf7f5; border: 1px solid #e1d9c8; border-radius: 20px; box-shadow: 0 10px 50px #5c493218; }
+.icecream-controls h2 { font-size: 19px; margin: 3px 0 13px; font-weight: 600; letter-spacing: -.02em; }
+.icecream-choices { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 13px; }
+.icecream-choices button { padding: 9px 14px; font-size: 14px; }
+.icecream-choices button[aria-pressed="true"] { color: #fff; background: #477870; border-color: #477870; }
+.icecream-buttons { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.icecream-view .icecream-primary { background: #477870; color: #fff; border-color: #477870; }
+.icecream-view .icecream-primary:hover:not(:disabled) { background: #365f58; }
+.icecream-hint { font-size: 12px; color: #687c72; line-height: 1.6; margin: 11px 0 0; min-height: 19px; }
+.icecream-meter { position: relative; height: 18px; background: #eae5d9; border-radius: 9px; margin: 18px 0 22px; overflow: hidden; }
+.icecream-meter-target { position: absolute; top: 0; bottom: 0; left: 35%; right: 35%; background: #a8c9a8; }
+.icecream-meter-indicator { position: absolute; top: 0; bottom: 0; width: 5px; background: #3a5550; left: 50%; transform: translateX(-50%); }
+.icecream-meter[data-kind="scoop"] .icecream-meter-target { left: 38%; right: 38%; }
+.icecream-score { font-size: 40px; line-height: 1.2; margin-right: 14px; color: #477870; font-variant-numeric: tabular-nums; }
+.icecream-result { display: flex; align-items: center; margin: 8px 0 18px; }
+.icecream-result p { margin: 0; font-size: 13px; line-height: 1.8; color: #687c72; }
+.icecream-notice { position: absolute; bottom: 8px; left: 16px; max-width: 300px; font-size: 11px; color: #8b5737; }
+.icecream-error { color: #a14e38; font-size: 13px; margin: 10px 0 0; }
+.icecream-view kbd { font: inherit; font-size: 10px; opacity: .75; margin-left: 8px; border: 1px solid currentColor; border-radius: 4px; padding: 1px 4px; }
+@media (max-width: 720px) {
+  .icecream-header { top: 68px; left: 14px; right: 14px; gap: 10px; }
+  .icecream-header button { padding: 9px 12px; font-size: 12px; }
+  .icecream-header h1 { font-size: 20px; }
+  .icecream-order { top: 138px; left: 14px; width: 155px; padding: 12px; }
+  .icecream-order h2 { font-size: 14px; margin: 6px 0; }
+  .icecream-order ol, .icecream-order p { font-size: 11px; }
+  .icecream-time { margin-top: 9px; padding-top: 9px; }
+  .icecream-controls { bottom: 12px; width: calc(100% - 24px); padding: 15px 16px; }
+  .icecream-controls h2 { font-size: 17px; }
+  .icecream-hint { font-size: 11px; }
+}
+@media (max-height: 620px) and (min-width: 721px) {
+  .icecream-order { top: 92px; padding: 14px; }
+  .icecream-controls { left: auto; right: 18px; transform: none; width: 440px; bottom: 14px; }
+}

@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 2,
+  "id": "two-wing-gate",
+  "title": "双翼协作门",
+  "description": "两位队友分别在左右隔间按 E 激活各自的木质开关。两个开关都打开后，共用石门消失；任一队友进入北侧终点，团队共同获胜。",
+  "author": "EarthOnline",
+  "version": "1.0.0",
+  "players": {
+    "min": 2,
+    "max": 2
+  },
+  "arena": {
+    "width": 20,
+    "depth": 16,
+    "spawns": [
+      [
+        -6,
+        -3
+      ],
+      [
+        6,
+        -3
+      ]
+    ],
+    "playerSpeed": 3,
+    "playerRadius": 0.3,
+    "material": "concrete"
+  },
+  "entities": [
+    {
+      "id": "partition",
+      "shape": "box",
+      "position": [
+        0,
+        1,
+        -3
+      ],
+      "size": [
+        0.5,
+        2,
+        10
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "shared-gate",
+      "shape": "box",
+      "position": [
+        0,
+        1.5,
+        2
+      ],
+      "size": [
+        20,
+        3,
+        0.5
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "west-switch",
+      "shape": "box",
+      "position": [
+        -5,
+        0.6,
+        -3
+      ],
+      "size": [
+        1,
+        1.2,
+        1
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "east-switch",
+      "shape": "box",
+      "position": [
+        5,
+        0.6,
+        -3
+      ],
+      "size": [
+        1,
+        1.2,
+        1
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "finish",
+      "shape": "cylinder",
+      "position": [
+        0,
+        0.15,
+        5
+      ],
+      "size": [
+        3,
+        0.3,
+        2
+      ],
+      "material": "plaster",
+      "trigger": true
+    }
+  ],
+  "variables": {
+    "west": 0,
+    "east": 0
+  },
+  "timers": [
+    {
+      "id": "deadline",
+      "duration": 90,
+      "autoStart": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "welcome",
+      "on": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "左右队友各按 E 激活开关，门开后前往北侧终点。"
+        }
+      ]
+    },
+    {
+      "id": "press-west",
+      "on": {
+        "type": "interact",
+        "entity": "west-switch"
+      },
+      "when": [
+        {
+          "variable": "west",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "set",
+          "variable": "west",
+          "value": 1
+        },
+        {
+          "type": "message",
+          "text": "左侧已准备，等待右侧队友。"
+        }
+      ]
+    },
+    {
+      "id": "open-from-west",
+      "on": {
+        "type": "interact",
+        "entity": "west-switch"
+      },
+      "when": [
+        {
+          "variable": "west",
+          "op": "eq",
+          "value": 1
+        },
+        {
+          "variable": "east",
+          "op": "eq",
+          "value": 1
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "shared-gate"
+        },
+        {
+          "type": "message",
+          "text": "合作开门成功！任一队友进入北侧终点即可获胜。"
+        }
+      ]
+    },
+    {
+      "id": "press-east",
+      "on": {
+        "type": "interact",
+        "entity": "east-switch"
+      },
+      "when": [
+        {
+          "variable": "east",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "set",
+          "variable": "east",
+          "value": 1
+        },
+        {
+          "type": "message",
+          "text": "右侧已准备，等待左侧队友。"
+        }
+      ]
+    },
+    {
+      "id": "open-from-east",
+      "on": {
+        "type": "interact",
+        "entity": "east-switch"
+      },
+      "when": [
+        {
+          "variable": "west",
+          "op": "eq",
+          "value": 1
+        },
+        {
+          "variable": "east",
+          "op": "eq",
+          "value": 1
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "shared-gate"
+        },
+        {
+          "type": "message",
+          "text": "合作开门成功！任一队友进入北侧终点即可获胜。"
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "on": {
+        "type": "enter",
+        "entity": "finish"
+      },
+      "when": [
+        {
+          "variable": "west",
+          "op": "eq",
+          "value": 1
+        },
+        {
+          "variable": "east",
+          "op": "eq",
+          "value": 1
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "团队完成了双翼协作！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "timeout",
+      "on": {
+        "type": "timer",
+        "timer": "deadline"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "时间到了，与队友重开再试。"
+        },
+        {
+          "type": "lose"
+        }
+      ]
+    }
+  ]
+}

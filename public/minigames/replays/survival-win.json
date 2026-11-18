@@ -1,0 +1,24 @@
+{
+  "steps": [
+    {
+      "frames": 40,
+      "input": {
+        "x": 0,
+        "z": -1
+      }
+    },
+    {
+      "frames": 560,
+      "input": {
+        "x": 0,
+        "z": 0
+      }
+    }
+  ],
+  "expect": {
+    "status": "won",
+    "variables": {
+      "seconds": 10
+    }
+  }
+}

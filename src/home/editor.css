@@ -1,0 +1,9 @@
+.room-editor { display:flex; flex-direction:column; width:100%; min-height:350px; height:min(76vh,720px); background:#eae8dc; color:#172823; border-radius:8px; overflow:hidden; }
+.room-editor .room-tools { display:flex; flex-wrap:wrap; gap:.45rem; align-items:end; padding:.65rem; background:#f2f1e7; }
+.room-editor label { font-size:.78rem; font-weight:600; display:grid; gap:.18rem; }
+.room-editor button,.room-editor select { color:#18362d; background:#fffef8; border:1px solid #869b8e; border-radius:4px; padding:.45rem .6rem; font:inherit; }
+.room-editor button:disabled { opacity:.45; }
+.room-editor .room-canvas { flex:1; min-height:180px; position:relative; }
+.room-editor canvas { display:block; height:100%; width:100%; }
+.room-editor .placing canvas { cursor:crosshair; }
+.room-editor .room-status { min-height:1.7rem; padding:.3rem .7rem; font-size:.85rem; }

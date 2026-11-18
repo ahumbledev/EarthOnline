@@ -1,0 +1,37 @@
+/* Functional instrument marks: the fish and the middle of the sightline stay clear. */
+#fight-hud.fight-instrument{width:170px;height:170px;color:#f5f0da;filter:drop-shadow(0 1px 1px #071a16ed);isolation:isolate}
+#fight-hud :is(.fight-cue,.fight-distance,.fight-window){text-shadow:-1px -1px 0 #10281f,1px -1px 0 #10281f,-1px 1px 0 #10281f,1px 1px 0 #10281f,0 2px 3px #06130e}
+#fight-hud .fight-track{stroke-opacity:.22;stroke-width:1}
+#fight-hud .fight-load{stroke-width:2;transition:stroke .15s}
+#fight-hud .fight-steering,#fight-hud .fight-tip-control,#fight-hud .fight-tip-up,#fight-hud .fight-tip-down{opacity:0;transition:opacity .15s}
+#fight-hud[data-controls=true]:not([data-direction="0"]) .fight-steering,#fight-hud[data-controls=true]:not([data-tip="0"]) .fight-tip-control{opacity:.88}
+#fight-hud .fight-steering-track,#fight-hud .fight-tip-track{stroke:currentColor;stroke-width:1;stroke-opacity:.28}
+#fight-hud .fight-steering-target,#fight-hud .fight-tip-target{stroke:currentColor;stroke-width:1.4;stroke-dasharray:2 2;fill:#11241c35}
+#fight-hud .fight-steering-actual,#fight-hud .fight-tip-actual{stroke:#fff8e6;stroke-width:2;stroke-linecap:round}
+#fight-hud .fight-left,#fight-hud .fight-right{stroke-width:1.7;stroke-dasharray:2 2;opacity:0}
+#fight-hud[data-direction="-1"] .fight-left,#fight-hud[data-direction="1"] .fight-right{opacity:.8}
+#fight-hud .fight-tip-up,#fight-hud .fight-tip-down{stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+#fight-hud[data-tip="1"] .fight-tip-up,#fight-hud[data-tip="-1"] .fight-tip-down{opacity:.8}
+#fight-hud[data-correct=true][data-warning=none]{color:#d2e7bd}
+#fight-hud[data-correct=true] :is(.fight-steering-target,.fight-tip-target){stroke-dasharray:none;fill:#c9dfab3d;stroke-width:1.8}
+#fight-hud[data-correct=true] :is(.fight-steering-actual,.fight-tip-actual){stroke:#d2e7bd}
+#fight-hud[data-mode=opening][data-warning=none]{color:#edd296}
+#fight-hud[data-mode=opening] .fight-reel{animation:none;opacity:.95;stroke-width:2;stroke-dasharray:var(--opening-progress) 100;transform:rotate(-90deg)}
+#fight-hud[data-mode=landing] .fight-reel{animation:none;opacity:.95;stroke-width:2;stroke-dasharray:var(--net-progress) 100;transform:rotate(-90deg)}
+#fight-hud[data-warning=high]{color:#ffc49b}
+#fight-hud[data-warning=low]{color:#f4d7a0}
+#fight-hud[data-warning=high] .fight-load{stroke-width:3;animation:line-warning .6s ease-in-out infinite}
+#fight-hud[data-warning=low] .fight-load{stroke-dasharray:3 8!important}
+#fight-hud[data-warning]:not([data-warning=none]) :is(.fight-steering-target,.fight-tip-target,.fight-steering-actual,.fight-tip-actual){stroke:currentColor;fill:none}
+#fight-hud .fight-bite-mark{opacity:0;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+#fight-hud[data-mode=bite]{color:#ffe0a3}
+#fight-hud[data-mode=bite] .fight-bite-mark{opacity:1}
+#fight-hud[data-mode=bite] .fight-load{stroke-width:3}
+#fight-hud .fight-distance{top:calc(100% + 1px);font:10px/1.4 "Lake Sans",sans-serif;letter-spacing:.04em;opacity:.84}
+#fight-hud .fight-cue{top:calc(100% + 21px);width:max-content;max-width:min(280px,calc(100vw - 36px));white-space:normal;text-wrap:balance;text-align:center;font:500 12px/1.45 "Lake Sans","PingFang SC",sans-serif;color:inherit}
+#fight-hud .fight-window{position:absolute;top:15%;left:50%;transform:translateX(-50%);font:10px/1.4 "Lake Sans",sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.03em;color:#f6e2af}
+#fight-hud[data-mode=charge]{color:#e8d4a2}
+@media(max-width:900px){#fight-hud.fight-instrument{width:150px;height:150px}}
+@media(max-width:700px){#fight-hud.fight-instrument{width:140px;height:140px}#fight-hud .fight-cue{font-size:12px;max-width:min(245px,calc(100vw - 30px))}}
+@media(max-height:500px){#fight-hud.fight-instrument{top:49%;width:118px;height:118px}#fight-hud .fight-distance{top:calc(100% - 1px)}#fight-hud .fight-cue{top:calc(100% + 16px);font-size:11px}}
+@media(prefers-reduced-motion:reduce){#fight-hud,#fight-hud *{animation:none!important;transition:none!important}}

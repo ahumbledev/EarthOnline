@@ -1,0 +1,8 @@
+.practice-wash-bay{position:absolute;inset:0;overflow:hidden;background:#14191b;color:#f5f6f0}
+.practice-wash-bay canvas{display:block;width:100%;height:100%;outline:none;touch-action:none;cursor:crosshair}
+.wash-toolbar,.wash-readout{position:absolute;display:flex;flex-wrap:wrap;align-items:center;gap:.5em;background:#161c1eef;border:1px solid #71807b;border-radius:6px;padding:.65rem .85rem;color:#f5f6f0}
+.wash-toolbar{top:12px;left:12px;right:12px;width:fit-content}.wash-toolbar h2{font:600 1.05rem system-ui;margin:0 .5rem 0 0;color:#fff}
+.wash-toolbar label{display:flex;align-items:center;gap:.4rem}.wash-toolbar select,.wash-toolbar button{background:#32423a;color:#f2f8f1;border:1px solid #748a7b;border-radius:4px;padding:.12rem .42rem}
+.wash-toolbar [aria-pressed=true]{background:#497455}.wash-readout{left:12px;bottom:12px;max-width:calc(100% - 24px);box-sizing:border-box}.wash-readout small{flex:1 1 100%}
+.wash-readout progress{height:.7rem;width:8rem;accent-color:#8cd4ad}
+@media(max-width:600px){.wash-toolbar,.wash-readout{font-size:.8rem}.wash-toolbar{gap:.3rem}.wash-readout small{font-size:.72rem}}

@@ -1,0 +1,5 @@
+# Character assets
+
+The two character meshes, clothes and textures derive from the CC0 system assets published by the MakeHuman Community and MPFB contributors. The packaged versions include fitted clothing, alternate hair and outfits, recolorable materials and an engine-ready skeleton. Asset metadata and texture container metadata were cleaned for redistribution. [MakeHuman assets](https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html) · [MakeHuman licensing](https://static.makehumancommunity.org/about/license.html)
+
+The idle, walk, run, start, stop, and jump clips derive from the Universal Animation Library by Quaternius (Gonzalo Furnier) and Patch's anymove / oil-paint starter animations, licensed under CC0. The character files use retargeted tracks with root motion removed and foot phase calibration. [Quaternius](https://quaternius.com/) · [Patch oil-paint](https://patch.gg/blendi/oil-paint) · [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)

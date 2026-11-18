@@ -1,0 +1,215 @@
+{
+  "slug": "van",
+  "washMap": 1024,
+  "accessMap": 512,
+  "dimensions": [
+    2.349,
+    1.919,
+    4.931
+  ],
+  "wheels": [
+    {
+      "x": 0.83,
+      "y": 0.35,
+      "z": 1.792,
+      "radius": 0.35,
+      "width": 0.267
+    },
+    {
+      "x": -0.828,
+      "y": 0.35,
+      "z": 1.792,
+      "radius": 0.35,
+      "width": 0.267
+    },
+    {
+      "x": 0.83,
+      "y": 0.35,
+      "z": -1.344,
+      "radius": 0.35,
+      "width": 0.267
+    },
+    {
+      "x": -0.828,
+      "y": 0.35,
+      "z": -1.344,
+      "radius": 0.35,
+      "width": 0.267
+    }
+  ],
+  "parts": [
+    {
+      "id": "bonnet",
+      "name": "Bonnet",
+      "kind": "bonnet"
+    },
+    {
+      "id": "roof",
+      "name": "Roof",
+      "kind": "body"
+    },
+    {
+      "id": "rear-door-l",
+      "name": "Rear Door L",
+      "kind": "door"
+    },
+    {
+      "id": "rear-door-r",
+      "name": "Rear Door R",
+      "kind": "door"
+    },
+    {
+      "id": "bumper-front",
+      "name": "Bumper Front",
+      "kind": "bumper-front"
+    },
+    {
+      "id": "bumper-rear",
+      "name": "Bumper Rear",
+      "kind": "bumper-rear"
+    },
+    {
+      "id": "grille",
+      "name": "Grille",
+      "kind": "grille"
+    },
+    {
+      "id": "windscreen",
+      "name": "Windscreen",
+      "kind": "windscreen"
+    },
+    {
+      "id": "door-fl",
+      "name": "Door Fl",
+      "kind": "door"
+    },
+    {
+      "id": "window-fl",
+      "name": "Window Fl",
+      "kind": "window"
+    },
+    {
+      "id": "door-fr",
+      "name": "Door Fr",
+      "kind": "door"
+    },
+    {
+      "id": "window-fr",
+      "name": "Window Fr",
+      "kind": "window"
+    },
+    {
+      "id": "door-rl",
+      "name": "Door Rl",
+      "kind": "door"
+    },
+    {
+      "id": "door-rr",
+      "name": "Door Rr",
+      "kind": "door"
+    },
+    {
+      "id": "fender-fl",
+      "name": "Fender Fl",
+      "kind": "body"
+    },
+    {
+      "id": "fender-fr",
+      "name": "Fender Fr",
+      "kind": "body"
+    },
+    {
+      "id": "quarter-rl",
+      "name": "Quarter Rl",
+      "kind": "body"
+    },
+    {
+      "id": "quarter-rr",
+      "name": "Quarter Rr",
+      "kind": "body"
+    },
+    {
+      "id": "sill-l",
+      "name": "Sill L",
+      "kind": "body"
+    },
+    {
+      "id": "sill-r",
+      "name": "Sill R",
+      "kind": "body"
+    },
+    {
+      "id": "mirror-l",
+      "name": "Mirror L",
+      "kind": "mirror"
+    },
+    {
+      "id": "mirror-r",
+      "name": "Mirror R",
+      "kind": "mirror"
+    },
+    {
+      "id": "headlight-l",
+      "name": "Headlight L",
+      "kind": "light"
+    },
+    {
+      "id": "headlight-r",
+      "name": "Headlight R",
+      "kind": "light"
+    },
+    {
+      "id": "taillight-l",
+      "name": "Taillight L",
+      "kind": "light"
+    },
+    {
+      "id": "taillight-r",
+      "name": "Taillight R",
+      "kind": "light"
+    },
+    {
+      "id": "hubcap-fl",
+      "name": "Hubcap Fl",
+      "kind": "hubcap"
+    },
+    {
+      "id": "tyre-fl",
+      "name": "Tyre Fl",
+      "kind": "tyre"
+    },
+    {
+      "id": "hubcap-fr",
+      "name": "Hubcap Fr",
+      "kind": "hubcap"
+    },
+    {
+      "id": "tyre-fr",
+      "name": "Tyre Fr",
+      "kind": "tyre"
+    },
+    {
+      "id": "hubcap-rl",
+      "name": "Hubcap Rl",
+      "kind": "hubcap"
+    },
+    {
+      "id": "tyre-rl",
+      "name": "Tyre Rl",
+      "kind": "tyre"
+    },
+    {
+      "id": "hubcap-rr",
+      "name": "Hubcap Rr",
+      "kind": "hubcap"
+    },
+    {
+      "id": "tyre-rr",
+      "name": "Tyre Rr",
+      "kind": "tyre"
+    }
+  ],
+  "texelsPerMetre": 97.5,
+  "id": "van",
+  "name": "Van"
+}

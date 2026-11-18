@@ -1,0 +1,11 @@
+.coffee-practice { display:flex; flex-direction:column; width:min(96vw,960px); height:min(88dvh,750px); margin:auto; background:#f4e9d6; color:#30261f; overflow:auto; border-radius:12px; }
+.coffee-practice header,.coffee-practice .coffee-controls { padding:.75rem 1rem; }
+.coffee-practice header { display:flex; align-items:center; justify-content:space-between; }
+.coffee-practice h2 { margin:0; font-size:1.2rem; }
+.coffee-practice .coffee-view { flex:1; min-height:160px; }
+.coffee-practice canvas { display:block; width:100%; height:100%; }
+.coffee-practice p { margin:.4rem 0; }
+.coffee-practice .coffee-buttons { display:flex; flex-wrap:wrap; gap:.35rem; }
+.coffee-practice button,.coffee-practice select { color:#342720; padding:.4rem .68rem; border:1px solid #9f8872; border-radius:5px; background:#fffaf0; font:inherit; touch-action:none; }
+.coffee-practice button:active { background:#cfb795; }
+.coffee-practice output { display:block; min-height:1.5em; margin-top:.4rem; }

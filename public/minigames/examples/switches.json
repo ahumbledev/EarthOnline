@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "author": "EarthOnline",
+  "version": "1.0.0",
+  "players": 1,
+  "id": "switch-vault",
+  "title": "双钮密室",
+  "description": "靠近两个木质开关，按 E 或 Enter 激活。两个开关一起开启石门；进入门后的终点。",
+  "arena": {
+    "width": 18,
+    "depth": 18,
+    "spawn": [
+      -6,
+      -2
+    ],
+    "playerSpeed": 3,
+    "playerRadius": 0.3,
+    "material": "stone"
+  },
+  "entities": [
+    {
+      "id": "north-switch",
+      "shape": "cylinder",
+      "position": [
+        -4,
+        0.6,
+        -2
+      ],
+      "size": [
+        1,
+        1.2,
+        1
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "south-switch",
+      "shape": "cylinder",
+      "position": [
+        -4,
+        0.6,
+        2
+      ],
+      "size": [
+        1,
+        1.2,
+        1
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "door",
+      "shape": "box",
+      "position": [
+        0,
+        1.5,
+        0
+      ],
+      "size": [
+        0.5,
+        3,
+        16
+      ],
+      "material": "concrete",
+      "solid": true
+    },
+    {
+      "id": "finish",
+      "shape": "cylinder",
+      "position": [
+        5,
+        0.15,
+        2
+      ],
+      "size": [
+        2,
+        0.3,
+        2
+      ],
+      "material": "plaster",
+      "trigger": true
+    }
+  ],
+  "variables": {
+    "north": 0,
+    "south": 0
+  },
+  "rules": [
+    {
+      "id": "welcome",
+      "on": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "靠近两个木质开关，按 E 激活；门开后进入终点。"
+        }
+      ]
+    },
+    {
+      "id": "press-north",
+      "on": {
+        "type": "interact",
+        "entity": "north-switch"
+      },
+      "when": [
+        {
+          "variable": "north",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "set",
+          "variable": "north",
+          "value": 1
+        },
+        {
+          "type": "message",
+          "text": "北侧开关已激活。"
+        }
+      ]
+    },
+    {
+      "id": "open-from-north",
+      "on": {
+        "type": "interact",
+        "entity": "north-switch"
+      },
+      "when": [
+        {
+          "variable": "north",
+          "op": "eq",
+          "value": 1
+        },
+        {
+          "variable": "south",
+          "op": "eq",
+          "value": 1
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "door"
+        },
+        {
+          "type": "message",
+          "text": "石门已开，前往终点。"
+        }
+      ]
+    },
+    {
+      "id": "press-south",
+      "on": {
+        "type": "interact",
+        "entity": "south-switch"
+      },
+      "when": [
+        {
+          "variable": "south",
+          "op": "eq",
+          "value": 0
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "set",
+          "variable": "south",
+          "value": 1
+        },
+        {
+          "type": "message",
+          "text": "南侧开关已激活。"
+        }
+      ]
+    },
+    {
+      "id": "open-from-south",
+      "on": {
+        "type": "interact",
+        "entity": "south-switch"
+      },
+      "when": [
+        {
+          "variable": "north",
+          "op": "eq",
+          "value": 1
+        },
+        {
+          "variable": "south",
+          "op": "eq",
+          "value": 1
+        }
+      ],
+      "once": true,
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "door"
+        },
+        {
+          "type": "message",
+          "text": "石门已开，前往终点。"
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "on": {
+        "type": "enter",
+        "entity": "finish"
+      },
+      "when": [
+        {
+          "variable": "north",
+          "op": "eq",
+          "value": 1
+        },
+        {
+          "variable": "south",
+          "op": "eq",
+          "value": 1
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "密室解开了！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "slug": "sedan",
+  "washMap": 1024,
+  "accessMap": 512,
+  "dimensions": [
+    2.09,
+    1.422,
+    5.03
+  ],
+  "wheels": [
+    {
+      "x": 0.781,
+      "y": 0.334,
+      "z": 1.391,
+      "radius": 0.334,
+      "width": 0.258
+    },
+    {
+      "x": -0.781,
+      "y": 0.334,
+      "z": 1.391,
+      "radius": 0.334,
+      "width": 0.258
+    },
+    {
+      "x": 0.781,
+      "y": 0.334,
+      "z": -1.416,
+      "radius": 0.334,
+      "width": 0.258
+    },
+    {
+      "x": -0.781,
+      "y": 0.334,
+      "z": -1.416,
+      "radius": 0.334,
+      "width": 0.258
+    }
+  ],
+  "parts": [
+    {
+      "id": "bonnet",
+      "name": "Bonnet",
+      "kind": "bonnet"
+    },
+    {
+      "id": "roof",
+      "name": "Roof",
+      "kind": "body"
+    },
+    {
+      "id": "tailgate",
+      "name": "Tailgate",
+      "kind": "body"
+    },
+    {
+      "id": "bumper-front",
+      "name": "Bumper Front",
+      "kind": "bumper-front"
+    },
+    {
+      "id": "bumper-rear",
+      "name": "Bumper Rear",
+      "kind": "bumper-rear"
+    },
+    {
+      "id": "grille",
+      "name": "Grille",
+      "kind": "grille"
+    },
+    {
+      "id": "windscreen",
+      "name": "Windscreen",
+      "kind": "windscreen"
+    },
+    {
+      "id": "rear-window",
+      "name": "Rear Window",
+      "kind": "window"
+    },
+    {
+      "id": "door-fl",
+      "name": "Door Fl",
+      "kind": "door"
+    },
+    {
+      "id": "window-fl",
+      "name": "Window Fl",
+      "kind": "window"
+    },
+    {
+      "id": "door-fr",
+      "name": "Door Fr",
+      "kind": "door"
+    },
+    {
+      "id": "window-fr",
+      "name": "Window Fr",
+      "kind": "window"
+    },
+    {
+      "id": "door-rl",
+      "name": "Door Rl",
+      "kind": "door"
+    },
+    {
+      "id": "window-rl",
+      "name": "Window Rl",
+      "kind": "window"
+    },
+    {
+      "id": "door-rr",
+      "name": "Door Rr",
+      "kind": "door"
+    },
+    {
+      "id": "window-rr",
+      "name": "Window Rr",
+      "kind": "window"
+    },
+    {
+      "id": "fender-fl",
+      "name": "Fender Fl",
+      "kind": "body"
+    },
+    {
+      "id": "fender-fr",
+      "name": "Fender Fr",
+      "kind": "body"
+    },
+    {
+      "id": "quarter-rl",
+      "name": "Quarter Rl",
+      "kind": "body"
+    },
+    {
+      "id": "quarter-rr",
+      "name": "Quarter Rr",
+      "kind": "body"
+    },
+    {
+      "id": "sill-l",
+      "name": "Sill L",
+      "kind": "body"
+    },
+    {
+      "id": "sill-r",
+      "name": "Sill R",
+      "kind": "body"
+    },
+    {
+      "id": "mirror-l",
+      "name": "Mirror L",
+      "kind": "mirror"
+    },
+    {
+      "id": "mirror-r",
+      "name": "Mirror R",
+      "kind": "mirror"
+    },
+    {
+      "id": "headlight-l",
+      "name": "Headlight L",
+      "kind": "light"
+    },
+    {
+      "id": "headlight-r",
+      "name": "Headlight R",
+      "kind": "light"
+    },
+    {
+      "id": "taillight-l",
+      "name": "Taillight L",
+      "kind": "light"
+    },
+    {
+      "id": "taillight-r",
+      "name": "Taillight R",
+      "kind": "light"
+    },
+    {
+      "id": "hubcap-fl",
+      "name": "Hubcap Fl",
+      "kind": "hubcap"
+    },
+    {
+      "id": "tyre-fl",
+      "name": "Tyre Fl",
+      "kind": "tyre"
+    },
+    {
+      "id": "hubcap-fr",
+      "name": "Hubcap Fr",
+      "kind": "hubcap"
+    },
+    {
+      "id": "tyre-fr",
+      "name": "Tyre Fr",
+      "kind": "tyre"
+    },
+    {
+      "id": "hubcap-rl",
+      "name": "Hubcap Rl",
+      "kind": "hubcap"
+    },
+    {
+      "id": "tyre-rl",
+      "name": "Tyre Rl",
+      "kind": "tyre"
+    },
+    {
+      "id": "hubcap-rr",
+      "name": "Hubcap Rr",
+      "kind": "hubcap"
+    },
+    {
+      "id": "tyre-rr",
+      "name": "Tyre Rr",
+      "kind": "tyre"
+    }
+  ],
+  "texelsPerMetre": 103.2,
+  "id": "sedan",
+  "name": "Sedan"
+}

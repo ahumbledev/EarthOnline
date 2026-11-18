@@ -1,0 +1,2337 @@
+{
+  "schemaVersion": 3,
+  "profile": "party16",
+  "id": "party16-team-relay",
+  "title": "十六人點燈",
+  "description": "十六人各在自己的通道按 E 點燈。全部燈亮後開門，所有人都抵達北端集合台才會共同獲勝。30秒內完成；本示例是共享合作規則，沒有私人排名或隊伍競技。",
+  "author": "EarthOnline",
+  "version": "1.0.0",
+  "players": {
+    "min": 16,
+    "max": 16
+  },
+  "arena": {
+    "width": 68,
+    "depth": 16,
+    "spawns": [
+      [
+        -30,
+        -5
+      ],
+      [
+        -26,
+        -5
+      ],
+      [
+        -22,
+        -5
+      ],
+      [
+        -18,
+        -5
+      ],
+      [
+        -14,
+        -5
+      ],
+      [
+        -10,
+        -5
+      ],
+      [
+        -6,
+        -5
+      ],
+      [
+        -2,
+        -5
+      ],
+      [
+        2,
+        -5
+      ],
+      [
+        6,
+        -5
+      ],
+      [
+        10,
+        -5
+      ],
+      [
+        14,
+        -5
+      ],
+      [
+        18,
+        -5
+      ],
+      [
+        22,
+        -5
+      ],
+      [
+        26,
+        -5
+      ],
+      [
+        30,
+        -5
+      ]
+    ],
+    "playerSpeed": 3,
+    "playerRadius": 0.3,
+    "material": "concrete"
+  },
+  "entities": [
+    {
+      "id": "gate",
+      "shape": "box",
+      "position": [
+        0,
+        1,
+        1
+      ],
+      "size": [
+        68,
+        2,
+        0.5
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-0",
+      "shape": "box",
+      "position": [
+        -28,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-1",
+      "shape": "box",
+      "position": [
+        -24,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-2",
+      "shape": "box",
+      "position": [
+        -20,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-3",
+      "shape": "box",
+      "position": [
+        -16,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-4",
+      "shape": "box",
+      "position": [
+        -12,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-5",
+      "shape": "box",
+      "position": [
+        -8,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-6",
+      "shape": "box",
+      "position": [
+        -4,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-7",
+      "shape": "box",
+      "position": [
+        0,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-8",
+      "shape": "box",
+      "position": [
+        4,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-9",
+      "shape": "box",
+      "position": [
+        8,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-10",
+      "shape": "box",
+      "position": [
+        12,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-11",
+      "shape": "box",
+      "position": [
+        16,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-12",
+      "shape": "box",
+      "position": [
+        20,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-13",
+      "shape": "box",
+      "position": [
+        24,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "divider-14",
+      "shape": "box",
+      "position": [
+        28,
+        1,
+        0
+      ],
+      "size": [
+        0.3,
+        2,
+        16
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "station-0",
+      "shape": "box",
+      "position": [
+        -30,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-0",
+      "shape": "box",
+      "position": [
+        -30,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-1",
+      "shape": "box",
+      "position": [
+        -26,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-1",
+      "shape": "box",
+      "position": [
+        -26,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-2",
+      "shape": "box",
+      "position": [
+        -22,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-2",
+      "shape": "box",
+      "position": [
+        -22,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-3",
+      "shape": "box",
+      "position": [
+        -18,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-3",
+      "shape": "box",
+      "position": [
+        -18,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-4",
+      "shape": "box",
+      "position": [
+        -14,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-4",
+      "shape": "box",
+      "position": [
+        -14,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-5",
+      "shape": "box",
+      "position": [
+        -10,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-5",
+      "shape": "box",
+      "position": [
+        -10,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-6",
+      "shape": "box",
+      "position": [
+        -6,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-6",
+      "shape": "box",
+      "position": [
+        -6,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-7",
+      "shape": "box",
+      "position": [
+        -2,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-7",
+      "shape": "box",
+      "position": [
+        -2,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-8",
+      "shape": "box",
+      "position": [
+        2,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-8",
+      "shape": "box",
+      "position": [
+        2,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-9",
+      "shape": "box",
+      "position": [
+        6,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-9",
+      "shape": "box",
+      "position": [
+        6,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-10",
+      "shape": "box",
+      "position": [
+        10,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-10",
+      "shape": "box",
+      "position": [
+        10,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-11",
+      "shape": "box",
+      "position": [
+        14,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-11",
+      "shape": "box",
+      "position": [
+        14,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-12",
+      "shape": "box",
+      "position": [
+        18,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-12",
+      "shape": "box",
+      "position": [
+        18,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-13",
+      "shape": "box",
+      "position": [
+        22,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-13",
+      "shape": "box",
+      "position": [
+        22,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-14",
+      "shape": "box",
+      "position": [
+        26,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-14",
+      "shape": "box",
+      "position": [
+        26,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "station-15",
+      "shape": "box",
+      "position": [
+        30,
+        0.5,
+        -4
+      ],
+      "size": [
+        0.6,
+        1,
+        0.6
+      ],
+      "material": "timber",
+      "interactable": true
+    },
+    {
+      "id": "arrival-15",
+      "shape": "box",
+      "position": [
+        30,
+        0.1,
+        5
+      ],
+      "size": [
+        2,
+        0.2,
+        1
+      ],
+      "material": "plaster",
+      "trigger": true
+    }
+  ],
+  "variables": {
+    "ready": 0,
+    "arrived": 0
+  },
+  "timers": [
+    {
+      "id": "deadline",
+      "duration": 30,
+      "autoStart": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "welcome",
+      "on": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "各按 E 點亮自己的燈，門開後全員走到北端集合！"
+        }
+      ]
+    },
+    {
+      "id": "ready-0",
+      "on": {
+        "type": "interact",
+        "entity": "station-0"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-0"
+        }
+      ]
+    },
+    {
+      "id": "open-0",
+      "on": {
+        "type": "interact",
+        "entity": "station-0"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-0",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-0"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-0",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-0"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-1",
+      "on": {
+        "type": "interact",
+        "entity": "station-1"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-1"
+        }
+      ]
+    },
+    {
+      "id": "open-1",
+      "on": {
+        "type": "interact",
+        "entity": "station-1"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-1",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-1"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-1",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-1"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-2",
+      "on": {
+        "type": "interact",
+        "entity": "station-2"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-2"
+        }
+      ]
+    },
+    {
+      "id": "open-2",
+      "on": {
+        "type": "interact",
+        "entity": "station-2"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-2",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-2"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-2",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-2"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-3",
+      "on": {
+        "type": "interact",
+        "entity": "station-3"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-3"
+        }
+      ]
+    },
+    {
+      "id": "open-3",
+      "on": {
+        "type": "interact",
+        "entity": "station-3"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-3",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-3"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-3",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-3"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-4",
+      "on": {
+        "type": "interact",
+        "entity": "station-4"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-4"
+        }
+      ]
+    },
+    {
+      "id": "open-4",
+      "on": {
+        "type": "interact",
+        "entity": "station-4"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-4",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-4"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-4",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-4"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-5",
+      "on": {
+        "type": "interact",
+        "entity": "station-5"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-5"
+        }
+      ]
+    },
+    {
+      "id": "open-5",
+      "on": {
+        "type": "interact",
+        "entity": "station-5"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-5",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-5"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-5",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-5"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-6",
+      "on": {
+        "type": "interact",
+        "entity": "station-6"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-6"
+        }
+      ]
+    },
+    {
+      "id": "open-6",
+      "on": {
+        "type": "interact",
+        "entity": "station-6"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-6",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-6"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-6",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-6"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-7",
+      "on": {
+        "type": "interact",
+        "entity": "station-7"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-7"
+        }
+      ]
+    },
+    {
+      "id": "open-7",
+      "on": {
+        "type": "interact",
+        "entity": "station-7"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-7",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-7"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-7",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-7"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-8",
+      "on": {
+        "type": "interact",
+        "entity": "station-8"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-8"
+        }
+      ]
+    },
+    {
+      "id": "open-8",
+      "on": {
+        "type": "interact",
+        "entity": "station-8"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-8",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-8"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-8",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-8"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-9",
+      "on": {
+        "type": "interact",
+        "entity": "station-9"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-9"
+        }
+      ]
+    },
+    {
+      "id": "open-9",
+      "on": {
+        "type": "interact",
+        "entity": "station-9"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-9",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-9"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-9",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-9"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-10",
+      "on": {
+        "type": "interact",
+        "entity": "station-10"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-10"
+        }
+      ]
+    },
+    {
+      "id": "open-10",
+      "on": {
+        "type": "interact",
+        "entity": "station-10"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-10",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-10"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-10",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-10"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-11",
+      "on": {
+        "type": "interact",
+        "entity": "station-11"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-11"
+        }
+      ]
+    },
+    {
+      "id": "open-11",
+      "on": {
+        "type": "interact",
+        "entity": "station-11"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-11",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-11"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-11",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-11"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-12",
+      "on": {
+        "type": "interact",
+        "entity": "station-12"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-12"
+        }
+      ]
+    },
+    {
+      "id": "open-12",
+      "on": {
+        "type": "interact",
+        "entity": "station-12"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-12",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-12"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-12",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-12"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-13",
+      "on": {
+        "type": "interact",
+        "entity": "station-13"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-13"
+        }
+      ]
+    },
+    {
+      "id": "open-13",
+      "on": {
+        "type": "interact",
+        "entity": "station-13"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-13",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-13"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-13",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-13"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-14",
+      "on": {
+        "type": "interact",
+        "entity": "station-14"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-14"
+        }
+      ]
+    },
+    {
+      "id": "open-14",
+      "on": {
+        "type": "interact",
+        "entity": "station-14"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-14",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-14"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-14",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-14"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "ready-15",
+      "on": {
+        "type": "interact",
+        "entity": "station-15"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "add",
+          "variable": "ready",
+          "value": 1
+        },
+        {
+          "type": "hide",
+          "entity": "station-15"
+        }
+      ]
+    },
+    {
+      "id": "open-15",
+      "on": {
+        "type": "interact",
+        "entity": "station-15"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "gate"
+        },
+        {
+          "type": "message",
+          "text": "全部就緒！每位隊友都要抵達北端集合台。"
+        }
+      ]
+    },
+    {
+      "id": "arrive-15",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-15"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "ready",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "add",
+          "variable": "arrived",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "win-15",
+      "on": {
+        "type": "enter",
+        "entity": "arrival-15"
+      },
+      "once": true,
+      "when": [
+        {
+          "variable": "arrived",
+          "op": "eq",
+          "value": 16
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "全員到齊，團隊挑戰完成！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "timeout",
+      "on": {
+        "type": "timer",
+        "timer": "deadline"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "時間到了；全員重新分工再試。"
+        },
+        {
+          "type": "lose"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "author": "EarthOnline",
+  "version": "1.0.0",
+  "players": 1,
+  "id": "lantern-collect",
+  "title": "巷口寻灯",
+  "description": "沿着小巷收集三盏灯，再走进东侧终点。方向键或 WASD 移动，60 秒内完成。",
+  "arena": {
+    "width": 20,
+    "depth": 16,
+    "spawn": [
+      -7,
+      0
+    ],
+    "playerSpeed": 3,
+    "playerRadius": 0.3,
+    "material": "concrete"
+  },
+  "entities": [
+    {
+      "id": "lantern-1",
+      "shape": "sphere",
+      "position": [
+        -4,
+        0.6,
+        0
+      ],
+      "size": [
+        0.8,
+        1.2,
+        0.8
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "lantern-2",
+      "shape": "sphere",
+      "position": [
+        -1,
+        0.6,
+        0
+      ],
+      "size": [
+        0.8,
+        1.2,
+        0.8
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "lantern-3",
+      "shape": "sphere",
+      "position": [
+        2,
+        0.6,
+        0
+      ],
+      "size": [
+        0.8,
+        1.2,
+        0.8
+      ],
+      "material": "plaster",
+      "trigger": true
+    },
+    {
+      "id": "finish",
+      "shape": "cylinder",
+      "position": [
+        6,
+        0.15,
+        0
+      ],
+      "size": [
+        2,
+        0.3,
+        2
+      ],
+      "material": "timber",
+      "trigger": true
+    },
+    {
+      "id": "north-wall",
+      "shape": "box",
+      "position": [
+        0,
+        1,
+        -4
+      ],
+      "size": [
+        12,
+        2,
+        0.5
+      ],
+      "material": "stone",
+      "solid": true
+    },
+    {
+      "id": "south-wall",
+      "shape": "box",
+      "position": [
+        0,
+        1,
+        4
+      ],
+      "size": [
+        12,
+        2,
+        0.5
+      ],
+      "material": "stone",
+      "solid": true
+    }
+  ],
+  "variables": {
+    "score": 0
+  },
+  "timers": [
+    {
+      "id": "deadline",
+      "duration": 60,
+      "autoStart": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "welcome",
+      "on": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "收集 3 盏灯，再走进木质终点。"
+        }
+      ]
+    },
+    {
+      "id": "collect-1",
+      "on": {
+        "type": "enter",
+        "entity": "lantern-1"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "lantern-1"
+        },
+        {
+          "type": "add",
+          "variable": "score",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "collect-2",
+      "on": {
+        "type": "enter",
+        "entity": "lantern-2"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "lantern-2"
+        },
+        {
+          "type": "add",
+          "variable": "score",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "collect-3",
+      "on": {
+        "type": "enter",
+        "entity": "lantern-3"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "hide",
+          "entity": "lantern-3"
+        },
+        {
+          "type": "add",
+          "variable": "score",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "on": {
+        "type": "enter",
+        "entity": "finish"
+      },
+      "when": [
+        {
+          "variable": "score",
+          "op": "gte",
+          "value": 3
+        }
+      ],
+      "actions": [
+        {
+          "type": "message",
+          "text": "三盏灯都带回来了！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    },
+    {
+      "id": "timeout",
+      "on": {
+        "type": "timer",
+        "timer": "deadline"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "时间到了，重新试试。"
+        },
+        {
+          "type": "lose"
+        }
+      ]
+    }
+  ]
+}

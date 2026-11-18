@@ -1,0 +1,62 @@
+{
+  "players": [
+    {
+      "id": "west-player",
+      "slot": 0
+    },
+    {
+      "id": "east-player",
+      "slot": 1
+    }
+  ],
+  "steps": [
+    {
+      "frames": 1,
+      "inputs": {
+        "west-player": {
+          "x": 0,
+          "z": 0,
+          "interact": true
+        },
+        "east-player": {
+          "x": 0,
+          "z": 0,
+          "interact": true
+        }
+      }
+    },
+    {
+      "frames": 160,
+      "inputs": {
+        "west-player": {
+          "x": 0,
+          "z": 1
+        },
+        "east-player": {
+          "x": 0,
+          "z": 1
+        }
+      }
+    },
+    {
+      "frames": 100,
+      "inputs": {
+        "west-player": {
+          "x": 1,
+          "z": 0
+        },
+        "east-player": {
+          "x": -1,
+          "z": 0
+        }
+      }
+    }
+  ],
+  "expect": {
+    "status": "won",
+    "variables": {
+      "west": 1,
+      "east": 1
+    }
+  }
+}

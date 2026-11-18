@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "author": "EarthOnline",
+  "version": "1.0.0",
+  "players": 1,
+  "id": "crossing-survival",
+  "title": "穿行十秒",
+  "description": "躲开三条来回移动的危险物，坚持 10 秒。开局先离开你所在的危险通道；触碰危险物即失败。",
+  "arena": {
+    "width": 16,
+    "depth": 16,
+    "spawn": [
+      0,
+      -5
+    ],
+    "playerSpeed": 3,
+    "playerRadius": 0.3,
+    "material": "timber"
+  },
+  "entities": [
+    {
+      "id": "low-hazard",
+      "shape": "box",
+      "position": [
+        -6,
+        0.6,
+        -5
+      ],
+      "size": [
+        1,
+        1.2,
+        1
+      ],
+      "material": "stone",
+      "trigger": true,
+      "motion": {
+        "to": [
+          6,
+          -5
+        ],
+        "duration": 4
+      }
+    },
+    {
+      "id": "mid-hazard",
+      "shape": "sphere",
+      "position": [
+        6,
+        0.6,
+        0
+      ],
+      "size": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "material": "concrete",
+      "trigger": true,
+      "motion": {
+        "to": [
+          -6,
+          0
+        ],
+        "duration": 3
+      }
+    },
+    {
+      "id": "high-hazard",
+      "shape": "cylinder",
+      "position": [
+        -6,
+        0.6,
+        5
+      ],
+      "size": [
+        1.4,
+        1.2,
+        1.4
+      ],
+      "material": "plaster",
+      "trigger": true,
+      "motion": {
+        "to": [
+          6,
+          5
+        ],
+        "duration": 2.5
+      }
+    }
+  ],
+  "variables": {
+    "seconds": 0
+  },
+  "timers": [
+    {
+      "id": "clock",
+      "duration": 1,
+      "repeat": true,
+      "autoStart": true
+    },
+    {
+      "id": "survive",
+      "duration": 10,
+      "autoStart": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "welcome",
+      "on": {
+        "type": "start"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "躲开移动危险物，坚持 10 秒。"
+        }
+      ]
+    },
+    {
+      "id": "hit-low",
+      "on": {
+        "type": "enter",
+        "entity": "low-hazard"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "碰到危险物了，再试一次。"
+        },
+        {
+          "type": "lose"
+        }
+      ]
+    },
+    {
+      "id": "hit-mid",
+      "on": {
+        "type": "enter",
+        "entity": "mid-hazard"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "碰到危险物了，再试一次。"
+        },
+        {
+          "type": "lose"
+        }
+      ]
+    },
+    {
+      "id": "hit-high",
+      "on": {
+        "type": "enter",
+        "entity": "high-hazard"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "碰到危险物了，再试一次。"
+        },
+        {
+          "type": "lose"
+        }
+      ]
+    },
+    {
+      "id": "count-seconds",
+      "on": {
+        "type": "timer",
+        "timer": "clock"
+      },
+      "actions": [
+        {
+          "type": "add",
+          "variable": "seconds",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "survived",
+      "on": {
+        "type": "timer",
+        "timer": "survive"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "text": "你成功坚持了十秒！"
+        },
+        {
+          "type": "win"
+        }
+      ]
+    }
+  ]
+}

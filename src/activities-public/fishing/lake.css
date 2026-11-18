@@ -1,0 +1,11 @@
+.practice-lake{min-height:100%;background:#e7e9db;color:#233e35;padding:clamp(12px,3vw,38px);box-sizing:border-box}
+.practice-lake header{max-width:1100px;margin:0 auto 16px;display:flex;align-items:center;justify-content:space-between}.practice-lake h2{font:600 clamp(1.7rem,4vw,3rem)/1.1 Georgia,serif;margin:.2rem 0}
+.lake-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(245px,30%);gap:1.25rem}.lake-water{height:clamp(310px,74vh,920px);position:relative}
+.lake-water canvas{height:100%;width:100%;display:block;border-radius:6px;cursor:crosshair}
+.lake-controls{display:flex;flex-direction:column;align-items:stretch;gap:.65rem}.lake-controls p{margin:.2rem 0}.lake-controls label{display:flex;align-items:center;justify-content:space-between;gap:.65rem}
+.practice-lake button,.lake-controls select{background:#f6f7ed;border:1px solid #8b9c8e;border-radius:4px;padding:.3rem .7rem}.practice-lake [aria-pressed=true]{background:#bbdcc7}.lake-controls output{font-weight:650}
+.lake-controls [hidden],.lake-water #fight-hud:not([data-visible=true]){display:none}.lake-controls fieldset{display:grid;gap:.35rem;border:1px solid #9aa998}
+.lake-water #fight-hud{position:absolute;top:12px;left:12px;pointer-events:none;color:#f4f8da}.lake-water #fight-hud svg{position:absolute;inset:0;width:100%;height:100%;stroke:currentColor}
+.lake-water #fight-hud .fight-load{stroke:#c0f6c6}.lake-water #fight-hud .fight-reel{stroke:#93c7c3}.lake-water .fight-distance,.lake-water .fight-cue,.lake-water .fight-window{position:absolute;text-align:center;left:0;width:100%;font:600 12px/1.1 system-ui;color:#fff}
+.lake-water .fight-distance{top:37%}.lake-water .fight-cue{top:54%}.lake-water .fight-window{top:65%}
+@media(max-width:680px){.lake-grid{grid-template-columns:1fr}.lake-water{height:42vh;min-height:260px}.lake-controls{padding-bottom:1rem}}
