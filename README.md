@@ -1,6 +1,10 @@
-# EarthOnline
+<p align="center">
+  <img src="public/branding/earth-online-logo.png" alt="EarthOnline" width="760">
+</p>
 
-> **Live Your Second Life**
+<h1 align="center">EarthOnline</h1>
+
+<p align="center"><strong>Live Your Second Life</strong></p>
 
 EarthOnline is an open-source, browser-based parallel Earth where players explore real cities, build relationships, participate in a shared economy, and create a second life together.
 
